@@ -1,8 +1,5 @@
 package basetest;
 
-import dto.AnaliseOperacionalResquestDTO;
-import dto.AssessorCentralizadoRequestDTO;
-import dto.BuscaContratoVigenteRequestDTO;
 import enums.Servico;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
@@ -10,7 +7,6 @@ import io.restassured.specification.RequestSpecification;
 import java.io.File;
 
 import static constans.AdministradorConstans.API_TOKEN;
-import static constans.ProfissionalSaudeConstans.*;
 import static io.restassured.RestAssured.given;
 import static requestspecification.RequestSpecificationFactory.requestSpecification;
 import static requestspecification.RequestSpecificationFactory.responseSpecification;

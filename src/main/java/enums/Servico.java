@@ -1,9 +1,10 @@
 package enums;
 
+import org.apache.xpath.operations.String;
+
 public enum Servico {
-    PUFV_BACKOFFICE( "pufv-backoffice"),
-    PUFV_USERS("pufv-users"),
-    PUFV_CONTRATO("pufv-contrato"),
+   SGHSS-BFF( "sghss-bff"),
+
     TOKEN("token");
 
     private final String path;

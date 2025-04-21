@@ -3,7 +3,6 @@ package contrato;
 import basetest.BaseDataFactory;
 import basetest.ContratoEntePublicoDescentralizadoBaseTest;
 import com.aventstack.extentreports.testng.listener.ExtentITestListenerClassAdapter;
-import dto.EntePublicoDescentralizadoRequestDTO;
 import io.sicredi.tm4j.common.annotations.TestCase;
 import io.sicredi.tm4j.testng.TM4JTestNGListener;
 import org.apache.http.HttpStatus;

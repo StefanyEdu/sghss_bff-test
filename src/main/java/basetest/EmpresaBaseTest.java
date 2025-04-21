@@ -1,15 +1,10 @@
 package basetest;
 
-import dto.AssessorEmpresaRequestDTO;
-import dto.AssessorVinculoRequestDTO;
-import dto.EmpresaPaginaRequestDTO;
-import dto.EmpresaRequestDTO;
 import enums.Servico;
 import io.restassured.response.ValidatableResponse;
 
 
 import static constans.AdministradorConstans.API_TOKEN;
-import static constans.ProfissionalSaudeConstans.*;
 import static io.restassured.RestAssured.given;
 import static requestspecification.RequestSpecificationFactory.requestSpecification;
 import static requestspecification.RequestSpecificationFactory.responseSpecification;

@@ -1,6 +1,5 @@
 package basetest;
 
-import dto.AssessorPedagogicoRequestDTO;
 import enums.Servico;
 import io.restassured.response.ValidatableResponse;
 

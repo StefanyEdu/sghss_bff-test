@@ -20,8 +20,8 @@
         <!--reportName>Status Report Test - SCD-Enquadrador</reportName-->
         <reportName>
             <![CDATA[
-            <img class='logo-sicredi' src='https://www.sicredi.com.br/assets/site/img/logo.png' />
-            <a class='report-text'>Programas Educacionais-Api PUFV-Contrato</a>
+            <img class='logo-sghss' src='https://www.sghss.com.br/assets/site/img/logo.png' />
+            <a class='report-text'>Sistema Hospitar SGHSS</a>
         ]]>
         </reportName>
         <!-- timestamp format -->
