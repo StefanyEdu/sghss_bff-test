@@ -1,0 +1,88 @@
+.test_template: &test_template
+  script:
+    - mvn clean test -Ppufv-auto -DtestSuite=$SUITE -Denv=$ENVIRONMENT
+    - mkdir -p cache/relatorio/$CI_JOB_NAME
+    - cp -r target/relatorio/* cache/relatorio/$CI_JOB_NAME/
+    - echo "Conteúdo do cache/relatorio/$CI_JOB_NAME"
+    - ls -l cache/relatorio/$CI_JOB_NAME
+  image: harbor.net/docker-base-images/maven:3.8.5-jdk-17-slim
+  tags:
+    - autoscaling_uat
+  only:
+    - master
+    - branches
+    - tags
+  cache:
+    key: cache-key-$CI_JOB_NAME
+    paths:
+      - cache/
+  artifacts:
+    when: always
+    expire_in: 4 week
+    paths:
+      - cache/relatorio/$CI_JOB_NAME/*
+
+stages:
+  - healthCheck-hom
+  - contrato-hom
+  - funcional-hom
+  - report
+
+variables:
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+
+cache:
+  key: cache-key
+  paths:
+    - $CI_PROJECT_DIR/.m2/repository
+    - cache/
+
+HealthCheck-Hom:
+  stage: healthCheck-hom
+  <<: *test_template
+  variables:
+    ENVIRONMENT: "dev"
+    SUITE: "HealthCheckSuite"
+
+Contrato-Hom:
+  stage: contrato-hom
+  <<: *test_template
+  variables:
+    ENVIRONMENT: "dev"
+    SUITE: "ContratoSuite"
+
+Funcional-Hom:
+  stage: funcional-hom
+  <<: *test_template
+  variables:
+    ENVIRONMENT: "dev"
+    SUITE: "FuncionalSuite"
+
+# Estágio de relatório
+Report:
+  stage: report
+  script:
+    - echo "Conteúdo do cache após extração"
+    - ls -l cache/relatorio || echo "Diretório cache/relatorio não encontrado"
+    - mkdir -p consolidated_reports/HealthCheck-Hom
+    - mkdir -p consolidated_reports/Contrato-Hom
+    - mkdir -p consolidated_reports/Funcional-Hom
+    - echo "Conteúdo do cache/relatorio/HealthCheck-Hom"
+    - ls -l cache/relatorio/HealthCheck-Hom || echo "Nada para copiar de HealthCheck-Hom"
+    - echo "Conteúdo do cache/relatorio/Contrato-Hom"
+    - ls -l cache/relatorio/Contrato-Hom || echo "Nada para copiar de Contrato-Hom"
+    - echo "Conteúdo do cache/relatorio/Funcional-Hom"
+    - ls -l cache/relatorio/Funcional-Hom || echo "Nada para copiar de Funcional-Hom"
+    - cp -r cache/relatorio/HealthCheck-Hom/* consolidated_reports/HealthCheck-Hom/ || echo "Nada para copiar de HealthCheck-Hom"
+    - cp -r cache/relatorio/Contrato-Hom/* consolidated_reports/Contrato-Hom/ || echo "Nada para copiar de Contrato-Hom"
+    - cp -r cache/relatorio/Funcional-Hom/* consolidated_reports/Funcional-Hom/ || echo "Nada para copiar de Funcional-Hom"
+    - echo "Relatórios consolidados em consolidated_reports/"
+  artifacts:
+    when: always
+    expire_in: 4 week
+    paths:
+      - consolidated_reports/*
+  dependencies:
+    - HealthCheck-Hom
+    - Contrato-Hom
+    - Funcional-Hom

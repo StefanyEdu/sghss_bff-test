@@ -1,0 +1,9 @@
+services:
+  pufv-backoffice:
+    url: https://sicredi-pufv-backoffice.uat.sicredi.cloud/programaseducacionais/backoffice/
+  pufv-users:
+    url: https://sicredi-pufv-users.uat.sicredi.cloud/programaseducacionais/users/
+  token:
+    url: https://wso2identity.hom.sicredi.net
+  pufv-contrato:
+      url: https://sicredi-pufv-contrato.uat.sicredi.cloud/programaseducacionais/contrato/

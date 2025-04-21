@@ -1,0 +1,144 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "idAditivo": {
+      "type": "null"
+    },
+    "dataDistrato": {
+      "type": "null"
+    },
+    "codCoop": {
+      "type": "string"
+    },
+    "codigo": {
+      "type": "string"
+    },
+    "dataFim": {
+      "type": "string"
+    },
+    "totalMeses": {
+      "type": "null"
+    },
+    "dataInicio": {
+      "type": "string"
+    },
+    "versaoContrato": {
+      "type": "integer"
+    },
+    "emailCoop": {
+      "type": "string"
+    },
+    "flgAtivo": {
+      "type": "boolean"
+    },
+    "idEstado": {
+      "type": "integer"
+    },
+    "flgAnaliseJuridica": {
+      "type": "boolean"
+    },
+    "flgStatus": {
+      "type": "integer"
+    },
+    "ultimaAvaliaEnviado": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "null"
+        },
+        "justificativa": {
+          "type": "null"
+        },
+        "acaoAvalia": {
+          "type": "null"
+        },
+        "acaoAvaliaValue": {
+          "type": "null"
+        },
+        "flgPrincipal": {
+          "type": "null"
+        },
+        "isAnaliseOperacional": {
+          "type": "null"
+        },
+        "datAlteracao": {
+          "type": "null"
+        },
+        "extencaoArquivo": {
+          "type": "null"
+        },
+        "caminho": {
+          "type": "null"
+        },
+        "nome": {
+          "type": "null"
+        },
+        "idPlanoTrabalho": {
+          "type": "null"
+        },
+        "extencaoArquivoPlanoTrabalho": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "id",
+        "justificativa",
+        "acaoAvalia",
+        "acaoAvaliaValue",
+        "flgPrincipal",
+        "isAnaliseOperacional",
+        "datAlteracao",
+        "extencaoArquivo",
+        "caminho",
+        "nome",
+        "idPlanoTrabalho",
+        "extencaoArquivoPlanoTrabalho"
+      ]
+    },
+    "nomCidade": {
+      "type": "string"
+    },
+    "avaliaAprovada": {
+      "type": "null"
+    },
+    "idDistrato": {
+      "type": "null"
+    },
+    "idContrato": {
+      "type": "integer"
+    },
+    "programasEducacionais": {
+      "type": "array",
+      "items": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    }
+  },
+  "required": [
+    "idAditivo",
+    "dataDistrato",
+    "codCoop",
+    "codigo",
+    "dataFim",
+    "totalMeses",
+    "dataInicio",
+    "versaoContrato",
+    "emailCoop",
+    "flgAtivo",
+    "idEstado",
+    "flgAnaliseJuridica",
+    "flgStatus",
+    "ultimaAvaliaEnviado",
+    "nomCidade",
+    "avaliaAprovada",
+    "idDistrato",
+    "idContrato",
+    "programasEducacionais"
+  ]
+}

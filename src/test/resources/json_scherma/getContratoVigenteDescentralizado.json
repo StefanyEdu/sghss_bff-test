@@ -1,0 +1,129 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "cpfAssessores": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "codCoop": {
+      "type": "string"
+    },
+    "codigo": {
+      "type": "string"
+    },
+    "versaoContrato": {
+      "type": "integer"
+    },
+    "idEmpresa": {
+      "type": "integer"
+    },
+    "emailCoop": {
+      "type": "string"
+    },
+    "cnpjEmpresa": {
+      "type": "string"
+    },
+    "dataInicio": {
+      "type": "string"
+    },
+    "nomeEmpresa": {
+      "type": "string"
+    },
+    "dataFim": {
+      "type": "string"
+    },
+    "observacoesReembolso": {
+      "type": "null"
+    },
+    "valorAssessoria": {
+      "type": "number"
+    },
+    "valorReuniao": {
+      "type": "number"
+    },
+    "valorFormacao": {
+      "type": "number"
+    },
+    "valorOutros": {
+      "type": "number"
+    },
+    "idContrato": {
+      "type": "integer"
+    },
+    "idAditivo": {
+      "type": "null"
+    },
+    "idDistrato": {
+      "type": "null"
+    },
+    "ativo": {
+      "type": "boolean"
+    },
+    "flgStatus": {
+      "type": "integer"
+    },
+    "dataDistrato": {
+      "type": "null"
+    },
+    "valorReembolsoHospedagem": {
+      "type": "null"
+    },
+    "reembolsoOutrosDescricao": {
+      "type": "null"
+    },
+    "valorReembolsoPedagio": {
+      "type": "null"
+    },
+    "valorReembolsoOutros": {
+      "type": "null"
+    },
+    "valorReembolsoDeslocamento": {
+      "type": "null"
+    },
+    "valorReembolsoAlimentacao": {
+      "type": "null"
+    },
+    "reembolsoObservacoes": {
+      "type": "null"
+    },
+    "totalMeses": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "cpfAssessores",
+    "codCoop",
+    "codigo",
+    "versaoContrato",
+    "idEmpresa",
+    "emailCoop",
+    "cnpjEmpresa",
+    "dataInicio",
+    "nomeEmpresa",
+    "dataFim",
+    "observacoesReembolso",
+    "valorAssessoria",
+    "valorReuniao",
+    "valorFormacao",
+    "valorOutros",
+    "idContrato",
+    "idAditivo",
+    "idDistrato",
+    "ativo",
+    "flgStatus",
+    "dataDistrato",
+    "valorReembolsoHospedagem",
+    "reembolsoOutrosDescricao",
+    "valorReembolsoPedagio",
+    "valorReembolsoOutros",
+    "valorReembolsoDeslocamento",
+    "valorReembolsoAlimentacao",
+    "reembolsoObservacoes",
+    "totalMeses"
+  ]
+}

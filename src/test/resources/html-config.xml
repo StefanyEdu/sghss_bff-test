@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <!-- report theme -->
+        <!-- standard, dark -->
+        <theme>standard</theme>
+
+        <!-- document encoding -->
+        <!-- defaults to UTF-8 -->
+        <encoding>UTF-8</encoding>
+
+        <!-- protocol for script and stylesheets -->
+        <!-- defaults to https -->
+        <protocol>http</protocol>
+
+        <!-- title of the document -->
+        <documentTitle>Relatorio de Teste</documentTitle>
+
+        <!-- report name - displayed at top-nav -->
+        <!--reportName>Status Report Test - SCD-Enquadrador</reportName-->
+        <reportName>
+            <![CDATA[
+            <img class='logo-sicredi' src='https://www.sicredi.com.br/assets/site/img/logo.png' />
+            <a class='report-text'>Programas Educacionais-Api PUFV-Contrato</a>
+        ]]>
+        </reportName>
+        <!-- timestamp format -->
+        <timeStampFormat>dd/MM/yyyy HH:mm:ss</timeStampFormat>
+
+        <!-- custom javascript -->
+        <scripts>
+            <![CDATA[
+               $(document).ready(function() {
+
+               });
+            ]]>
+        </scripts>
+
+        <!-- custom styles -->
+        <styles>
+            <![CDATA[
+                nav {background: #63c731;}
+                .brand-logo.black{display: none}
+                .nav-wrapper {background: #19222d !important;}
+                .blue.darken-2 {background-color: #57BA32!important}
+                .logo-container{width: 01px;}
+                .logo-container a {color: #63c731; margin-left: 900px;}
+                .report-name-div {position: relative; z-index: 2001; margin-left: 120px;}
+                .report-name {border-color: red; border-style: solid; border-width: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px -7px -50px; }
+                .report-name img { float: left; margin-top: 1px;}
+                .report-headline{padding: 0px 0px 0px 0px; margin: 0px 0px 0px 40px;}
+                .report-headline{font-size: 20px !important;}
+                .report-headline{font-family: Arial !important;}
+                .side-nav:hover {width: 130px; }
+                .side-nav li.active {background-color: #57BA32}
+                .side-nav li:hover {background-color: #63c731}
+                body:not(.default) {overflow: scroll !important;}
+                .light-blue {background-color: #00FF00!important;}
+                .light-blue.lighten-3 {background-color: #98FB98!important;}
+                .logo-sicredi{top: 46px !importat;}
+                body{font-size: 15px !important;}
+                .report-text{padding-left: 60px;color: #cfcfcf !important;font-size: x-large;}
+            ]]>
+        </styles>
+    </configuration>
+</extentreports>
