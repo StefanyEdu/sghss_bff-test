@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="FuncionalSuite">
-    <test name="Testes Funcionais - PUFV Contrato">
+    <test name="Testes Funcionais - SGHSS-Bff">
         <groups>
             <run>
-                <include name="funcional-empresa-Com-Sucesso"/>
-                <include name="funcional-empresa-Com-Erro"/>
-                <include name="funcional-ente-publico-descentralizado-Com-Sucesso"/>
-                <include name="funcional-ente-publico-descentralizado-Com-Erro"/>
-                <include name="funcional-ente-publico-centralizado-Com-Sucesso"/>
-                <include name="funcional-ente-publico-centralizado-Com-Erro"/>
-                <include name="funcional-assessor-centralizado-com-erro"/>
-                <include name="funcional-assessor-centralizado-com-sucesso"/>
-                <include name="funcional-assessor-descentralizado-com-erro"/>
-                <include name="funcional-assessor-descentralizado-com-sucesso"/>
-                <include name="funcional-ente-privado-descentralizado"/>
-                <include name="funcional-ente-privado-centralizado"/>
+                <include name="funcional-paciente-Com-Sucesso"/>
+                <include name="funcional-profissional-saude-Com-Sucesso"/>
+                <include name="funcional-admin-Com-Sucesso"/>
             </run>
         </groups>
         <packages>

@@ -12,7 +12,7 @@ public class AdministradorConstans {
 
     public static String ENPOINT_GET_CONSULTA_AGANDADAS_MARCADAS_POR_MEDICO="/v1/agenda/{idMedico}";
     public static String ENPOINT_GET_CONSULTA_AGANDADAS_MARCADAS_POR_PACIENTE="v1/agenda/marcada/{cpfPaciente}";
-    public static String ENPOINT_POST_CADASTRO_RECEITA="/v1/medico/receita/";
+
 
     //administrativo
     public static String ENPOINT_POST_CADASTRO_LEITO="v1/leito/";

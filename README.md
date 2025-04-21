@@ -5,7 +5,7 @@ Projeto de testes funcionais do projeto [https://github.com/StefanyEdu/sghss_bff
 ## Modelo para criação de uma branch
 
 ```
-[yyyy-mm-dd]-CODIGO_DO_JIRA[código da tarefa]-[descrição da task]
+[yyyy-mm-dd]-[código da tarefa]-[descrição da task]
 ```
 
 ## Estrutura do projeto
@@ -74,35 +74,35 @@ Exemplo: CreateProductDataFactory
 Este projeto usa maven, execute seus testes digitando o comando abaixo no terminal do IntelliJ IDEA:
 
 ```
-$ mvn test -Pcomunidade-aprovacoes-auto -DtestSuite=FuncionalSuite -Denv=dev
+$ mvn test -Psghss-bff-auto -DtestSuite=FuncionalSuite -Denv=dev
 ```
 
 ```
-$ mvn test -Pcomunidade-aprovacoes-auto -DtestSuite=E2ESuite -Denv=dev
+$ mvn test -Psghss-bff-auto -DtestSuite=E2ESuite -Denv=dev
 ```
 
 ```
-$ mvn test -Pcomunidade-aprovacoes-auto -DtestSuite=ContratoSuite -Denv=dev
+$ mvn test -Psghss-bff-auto -DtestSuite=ContratoSuite -Denv=dev
 ```
 
 ```
-$ mvn test -Pcomunidade-aprovacoes-auto -DtestSuite=HealthCheckSuite -Denv=dev
+$ mvn test -Psghss-bffs-auto -DtestSuite=HealthCheckSuite -Denv=dev
 ```
 
 ```
-$ mvn test -Pcomunidade-aprovacoes-auto -DtestSuite=E2ESuite -Denv=hom
+$ mvn test -Psghss-bff-auto -DtestSuite=E2ESuite -Denv=hom
 ```
 
 ```
-$ mvn test -Pcomunidade-aprovacoes-auto -DtestSuite=FuncionalSuite -Denv=hom
+$ mvn test -Psghss-bff-auto -DtestSuite=FuncionalSuite -Denv=hom
 ```
 
 ```
-$ mvn test -Pcomunidade-aprovacoes-auto -DtestSuite=ContratoSuite -Denv=hom
+$ mvn test -Psghss-bff-auto -DtestSuite=ContratoSuite -Denv=hom
 ```
 
 ```
-$ mvn test -Pcomunidade-aprovacoes-auto -DtestSuite=HealthCheckSuite -Denv=hom
+$ mvn test -Psghss-bff-auto -DtestSuite=HealthCheckSuite -Denv=hom
 ```
 
 ## Modelo para descrição de um commit

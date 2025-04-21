@@ -3,7 +3,7 @@ package enums;
 import org.apache.xpath.operations.String;
 
 public enum Servico {
-   SGHSS-BFF( "sghss-bff"),
+   SGHSS( "sghss-bff"),
 
     TOKEN("token");
 

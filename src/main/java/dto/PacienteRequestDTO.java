@@ -12,13 +12,14 @@ public class PacienteRequestDTO {
     private String cpfPaciente;
     private String nomePaciente;
     private String telefone;
-    private String Endereço;
+    private String endereco;
     private String convenio;
-    private String Bairro;
+    private String bairro;
     private String alergias;
     private String numero;
     private String email;
     private String cidade;
     private String estado;
+    private String quadroClinico;
 
 }
