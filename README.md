@@ -1,6 +1,6 @@
-# PUFV CONTRATO
+# SGHSS
 
-Projeto de testes funcionais do projeto [https://gitlab.sicredi.net/pufv/sicredi-pufv-contrato.git](link_do_projeto_de_desenvolvimento).
+Projeto de testes funcionais do projeto [https://github.com/StefanyEdu/sghss_bff-test](link_do_projeto_de_desenvolvimento).
 
 ## Modelo para criação de uma branch
 
