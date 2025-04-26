@@ -61,11 +61,11 @@ public class BffBaseTest {
                 .spec(responseSpecification());
     }
 
-    public ValidatableResponse postCadastroAgendaExame(String token,AgendaRequestDTO body){
+    public ValidatableResponse postCadastroAgendaExame(String token,AgendaRequestDTO boby){
         return given()
                 .spec(requestSpecification(Servico.SGHSS))
                 .header("Authorization","Bearer "+token)
-                .body(body)
+                .body(boby)
                 .when()
                 .post(ENPOINT_POST_CADASTRA_AGENDA_EXAME)
                 .then()
