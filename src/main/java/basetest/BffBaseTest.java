@@ -5,8 +5,7 @@ import enums.Servico;
 import io.restassured.response.ValidatableResponse;
 
 import static constans.AdministradorConstans.*;
-import static constans.PacienteUserConstans.ENDPOINT_POST_CADASTRO_PACIENTE;
-import static constans.PacienteUserConstans.ENDPOINT_PUT_EDICAO_PACIENTE;
+import static constans.PacienteUserConstans.*;
 import static constans.ProfissionalSaudeConstans.*;
 import static io.restassured.RestAssured.given;
 import static requestspecification.RequestSpecificationFactory.requestSpecification;
@@ -49,6 +48,17 @@ public class BffBaseTest {
                 .then()
                 .spec(responseSpecification());
     }
+    public ValidatableResponse postCadastroAgendaPaciente(String token, String cpfPaciente,PacienteAgendaRequestDTO body){
+        return given()
+                .spec(requestSpecification(Servico.SGHSS))
+                .header("Authorization","Bearer "+token)
+                .pathParam("cpfPaciente",cpfPaciente)
+                .body(body)
+                .when()
+                .post(ENPOINT_POST_CADASTRO_AGENDA_PACIENTE)
+                .then()
+                .spec(responseSpecification());
+    }
 
     public ValidatableResponse postCadastroLeito(String token,LeitosRequestDTO body){
         return given()
@@ -82,7 +92,7 @@ public class BffBaseTest {
                 .then()
                 .spec(responseSpecification());
     }
-    public ValidatableResponse putCadastroPacienteAtendimento(String token,PacienteRequestDTO body){
+    public ValidatableResponse putCadastroPaciente(String token,PacienteRequestDTO body){
         return given()
                 .spec(requestSpecification(Servico.SGHSS))
                 .header("Authorization","Bearer "+token)
@@ -139,6 +149,20 @@ public class BffBaseTest {
 
     }
 
+    public ValidatableResponse postCadastroReceita(String token, ReceitaRequestDTO boby){
+        return given()
+                .spec(requestSpecification(Servico.SGHSS))
+                .header("Authorization","Bearer "+token)
+                .body(boby)
+                .when()
+                .post(ENPOINT_POST_CADASTRO_RECEITA)
+                .then()
+                .spec(responseSpecification());
+
+    }
+
+
+
     public ValidatableResponse postCadastroProntuarioPaciente(String token, ProntuarioRequestDTO body){
         return given()
                 .spec(requestSpecification(Servico.SGHSS))
@@ -152,7 +176,16 @@ public class BffBaseTest {
     }
 
 
-
+    public ValidatableResponse getConsultasProfissionalSaude(String token,String cpfProfissional){
+        return given()
+                .spec(requestSpecification(Servico.SGHSS))
+                .header("Authorization","Bearer "+token)
+                .pathParam("cpfProfissional",cpfProfissional)
+                .when()
+                .get(ENDPOINT_GET_CONSULTA_TODOS_PROFISSIONAIS_SAUDE)
+                .then()
+                .spec(responseSpecification());
+    }
 
 
 

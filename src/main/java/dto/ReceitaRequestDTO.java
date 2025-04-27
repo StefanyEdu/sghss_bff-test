@@ -11,5 +11,6 @@ import lombok.*;
 public class ReceitaRequestDTO {
     private String prescricao;
     private String data;
+    private String assinatura;
 
 }

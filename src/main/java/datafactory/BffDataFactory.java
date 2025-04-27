@@ -1,9 +1,7 @@
 package datafactory;
 
 import dto.*;
-
 public class BffDataFactory {
-
     public AgendaRequestDTO cadastroAgenda(String dataInicio, String dataFim, String mes,
                                            String medicoResponsavel,
                                            String recorrencia,
@@ -30,7 +28,6 @@ public class BffDataFactory {
                 .tipoLeito(tipoLeito)
                 .build();
     }
-
     public PacienteRequestDTO cadastroPaciente(String cpfPaciente,
                                                String nomePaciente,
                                                String telefone,
@@ -59,8 +56,8 @@ public class BffDataFactory {
                 .quadroClinico(quadroClinico)
                 .build();
     }
-
-    public ProfissionalSaudeRequestDTO cadastroProfissionalSaude(String cpfCnpjProfissionalSaude,
+    public ProfissionalSaudeRequestDTO cadastroProfissionalSaude(String nomoProfissional,
+                                                                 String cpfCnpjProfissionalSaude,
                                                                  String especialidade,
                                                                  String CRM,
                                                                  String telefone,
@@ -70,6 +67,7 @@ public class BffDataFactory {
                                                                  String email) {
         return ProfissionalSaudeRequestDTO
                 .builder()
+                .nomeProfissional(nomoProfissional)
                 .cpfCnpjProfissionalSaude(cpfCnpjProfissionalSaude)
                 .especialidade(especialidade)
                 .CRM(CRM)
@@ -95,12 +93,31 @@ public class BffDataFactory {
     }
 
 
-    public ReceitaRequestDTO cadastroReceita( String prescricao,String data){
+    public ReceitaRequestDTO cadastroReceita(String prescricao, String data,String assinatura) {
         return ReceitaRequestDTO
                 .builder()
                 .prescricao(prescricao)
                 .data(data)
+                .assinatura(assinatura)
                 .build();
+    }
+
+    public PacienteAgendaRequestDTO cadastroPacienteAgenda(String nomePaciente, String nomeMedico,
+                                                     String especialidade,
+                                                     String horario,
+                                                     String dataConsulta,
+                                                     String exame) {
+
+        return PacienteAgendaRequestDTO
+                .builder()
+                .nomePaciente(nomePaciente)
+                .nomeMedico(nomeMedico)
+                .especialidade(especialidade)
+                .horario(horario)
+                .dataConsulta(dataConsulta)
+                .exame(exame)
+                .build();
+
     }
 
 

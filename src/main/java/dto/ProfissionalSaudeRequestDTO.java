@@ -9,6 +9,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ProfissionalSaudeRequestDTO {
+    private String nomeProfissional;
     private String cpfCnpjProfissionalSaude;
     private String especialidade;
     private String CRM;
