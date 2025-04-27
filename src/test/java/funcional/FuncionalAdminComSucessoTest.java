@@ -13,8 +13,6 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import utils.GeradorDatas;
 import utils.GeradorNomeDataRg;
-
-import static org.hamcrest.Matchers.hasItems;
 import static org.hamcrest.Matchers.is;
 
 @Listeners({ExtentITestListenerClassAdapter.class})
@@ -27,8 +25,6 @@ public class FuncionalAdminComSucessoTest extends BaseDataFactory {
     BffBaseTest bffBaseTest = new BffBaseTest();
     Integer idAgendaMedico;
     Integer idAgendaExame;
-
-
     @BeforeTest(groups = "funcional-admin-Com-Sucesso", description = "Cria token para admin")
     public void geraToken() {
         tokenValido = bffBaseTest.token("password", "stefany_eduarda", "teste123", "openid")
@@ -36,7 +32,6 @@ public class FuncionalAdminComSucessoTest extends BaseDataFactory {
                 .extract().response().jsonPath().getString("access_token");
 
     }
-
 
     @Test(groups = "funcional-admin-Com-Sucesso", priority = 1, description = "CTR17 Validar POST cadastro de agenda dos médicos e exames ")
     public void validarCadastroAgendaMedicoComSucessoTest() {
