@@ -97,6 +97,18 @@ public class FuncionalProfissionalSaudeComSucessoTest extends BaseDataFactory {
 
     }
 
+    @Test(groups = "funcional-profissional-saude-Com-Sucesso",priority = 5,description = "")
+    public void validarCadastroProtuarioPacienteComSucessoTest(){
+        prontuarioRequestDTO = bffDataFactory.cadastroProntuarioPaciente(
+                "Dor abdominal,flautulencias,inchaço pervico",
+                "tomar repositor de sais",
+                null,
+                "ambolinhas de biovicerim, agua e soro");
+        bffBaseTest.postCadastroProntuarioPaciente(tokenValido,prontuarioRequestDTO)
+                .statusCode(HttpStatus.SC_OK);
+
+    }
+
 
 
 
