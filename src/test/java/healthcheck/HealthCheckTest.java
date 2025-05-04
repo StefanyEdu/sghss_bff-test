@@ -1,16 +1,12 @@
 package healthcheck;
-
 import com.aventstack.extentreports.testng.listener.ExtentITestListenerClassAdapter;
 import enums.Servico;
 import env.AmbienteAtualLoader;
-
 import org.apache.http.HttpStatus;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import property.PropertyLoader;
-
 import static io.restassured.RestAssured.given;
-
 import static org.hamcrest.Matchers.is;
 import static requestspecification.RequestSpecificationFactory.requestSpecification;
 import static requestspecification.RequestSpecificationFactory.responseSpecification;

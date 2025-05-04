@@ -1,5 +1,4 @@
 package funcional;
-
 import basetest.BaseDataFactory;
 import basetest.BffBaseTest;
 import com.aventstack.extentreports.testng.listener.ExtentITestListenerClassAdapter;
@@ -9,7 +8,6 @@ import org.apache.http.HttpStatus;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import utils.GeradorNomeDataRg;
-
 import static org.hamcrest.Matchers.is;
 
 @Listeners({ExtentITestListenerClassAdapter.class})
